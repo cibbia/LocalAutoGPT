@@ -114,9 +114,8 @@ class LlmModel(str, Enum, metaclass=LlmModelMeta):
     OLLAMA_LLAMA3_8B = "llama3"
     OLLAMA_LLAMA3_405B = "llama3.1:405b"
     OLLAMA_DOLPHIN = "dolphin-mistral:latest"
-    # Local DeepSeek models via Ollama
-    OLLAMA_DEEPSEEK_R1 = "deepseek-r1:latest"
-    OLLAMA_DEEPSEEK_CHAT = "deepseek-chat:latest"
+    # Local Gemma models via Ollama
+    OLLAMA_GEMMA_2B = "gemma:2b"
     # OpenRouter models
     GEMINI_FLASH_1_5 = "google/gemini-flash-1.5"
     GEMINI_2_5_PRO = "google/gemini-2.5-pro-preview-03-25"
@@ -219,9 +218,8 @@ MODEL_METADATA = {
     LlmModel.OLLAMA_LLAMA3_8B: ModelMetadata("ollama", 8192, None),
     LlmModel.OLLAMA_LLAMA3_405B: ModelMetadata("ollama", 8192, None),
     LlmModel.OLLAMA_DOLPHIN: ModelMetadata("ollama", 32768, None),
-    # Local DeepSeek models via Ollama
-    LlmModel.OLLAMA_DEEPSEEK_R1: ModelMetadata("ollama", 128000, None),
-    LlmModel.OLLAMA_DEEPSEEK_CHAT: ModelMetadata("ollama", 64000, None),
+    # Local Gemma models via Ollama
+    LlmModel.OLLAMA_GEMMA_2B: ModelMetadata("ollama", 8192, None),
     # https://openrouter.ai/models
     LlmModel.GEMINI_FLASH_1_5: ModelMetadata("open_router", 1000000, 8192),
     LlmModel.GEMINI_2_5_PRO: ModelMetadata("open_router", 1050000, 8192),

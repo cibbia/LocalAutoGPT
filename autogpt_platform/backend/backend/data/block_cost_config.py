@@ -75,6 +75,9 @@ MODEL_COST: dict[LlmModel, int] = {
     LlmModel.OLLAMA_LLAMA3_405B: 1,
     LlmModel.DEEPSEEK_LLAMA_70B: 1,  # ? / ?
     LlmModel.OLLAMA_DOLPHIN: 1,
+    # Local DeepSeek models (free since they're running locally)
+    LlmModel.OLLAMA_DEEPSEEK_R1: 0,
+    LlmModel.OLLAMA_DEEPSEEK_CHAT: 0,
     LlmModel.GEMINI_FLASH_1_5: 1,
     LlmModel.GEMINI_2_5_PRO: 4,
     LlmModel.GROK_BETA: 5,

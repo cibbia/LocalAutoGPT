@@ -95,6 +95,11 @@ setup_ollama() {
 download_models() {
     print_status "Downloading Gemma models..."
     
+    # Clean up any old DeepSeek models
+    print_status "Cleaning up any old DeepSeek models..."
+    docker exec ollama ollama rm deepseek-r1 2>/dev/null || true
+    docker exec ollama ollama rm deepseek-chat 2>/dev/null || true
+    
     # Gemma 2B model
     print_status "Downloading Gemma 2B model (this may take several minutes)..."
     docker exec ollama ollama pull gemma:2b
@@ -110,7 +115,7 @@ test_models() {
     
     # Test Gemma 2B
     print_status "Testing Gemma 2B..."
-    docker exec ollama ollama run gemma:2b "Hello! Please respond with just 'Gemma 2B is working'" --timeout 30
+    docker exec ollama ollama run gemma:2b "Hello! Please respond with just 'Gemma 2B is working'"
 }
 
 # Display final instructions
